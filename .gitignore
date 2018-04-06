@@ -1,0 +1,4 @@
+nanjing-data/2*.csv
+*.ldb
+*.mdb
+.ipynb_checkpoints

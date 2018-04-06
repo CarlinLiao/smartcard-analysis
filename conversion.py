@@ -7,9 +7,9 @@
 import pyodbc
 import csv
 
-filename = '20150430' # change depending on input file
+filename = '20150301' # change depending on input file
 
-conn_string = ('DRIVER={{Microsoft Access Driver (*.mdb, *.accdb)}};DBQ=C:\Bash\ieor_midterm\\raw\{0}.mdb'.format(filename)) 
+conn_string = ('DRIVER={{Microsoft Access Driver (*.mdb, *.accdb)}};DBQ=C:\Bash\smartcard-analysis\\raw\{0}.mdb'.format(filename)) 
 
 conn = pyodbc.connect(conn_string)
 
@@ -17,7 +17,7 @@ cursor = conn.cursor()
 
 cursor.execute('select * from ACCT660001;')
 
-with open('data\{}.csv'.format(filename),'w',newline='') as f:
+with open('nanjing-data\{}.csv'.format(filename),'w',newline='') as f:
     writer = csv.writer(f)
     temp = [i[0] for i in cursor.description]
     writer.writerows(temp[9:]) # skip header that was split into 8 rows for some reason

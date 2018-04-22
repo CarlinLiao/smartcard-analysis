@@ -3,3 +3,4 @@ nanjing-data/2*.csv
 *.mdb
 .ipynb_checkpoints
 *.hdf
+*.png

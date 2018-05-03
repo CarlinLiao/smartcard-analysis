@@ -4,3 +4,5 @@ nanjing-data/2*.csv
 .ipynb_checkpoints
 *.hdf
 *.png
+feature_engineering/*.csv
+feature_engineering/prebuilt/*.csv
